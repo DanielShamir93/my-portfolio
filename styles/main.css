@@ -3,16 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Pacifico;
-  user-select: none;
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */ }
+  user-select: none; }
 
 html {
   scrollbar-width: none; }
@@ -75,12 +66,12 @@ html {
     transform: translateY(25vh); } }
 
 @font-face {
-  src: url(../fonts/Pacifico-Regular.ttf);
+  src: url(../assets/fonts/Pacifico-Regular.ttf);
   font-family: Pacifico; }
 
 /* screen 1 styles */
 .screen1 {
-  width: 100vw;
+  width: 120vw;
   min-height: 100vh;
   background: #e0dede;
   overflow: hidden; }
@@ -135,8 +126,11 @@ html {
       position: absolute;
       transform: scale(0);
       animation: hello-animation 1s forwards ease 5.5s; }
-      .screen1 .top-background .hello-msg p span {
+      .screen1 .top-background .hello-msg p span:nth-of-type(1) {
         font-size: 5vh; }
+      .screen1 .top-background .hello-msg p span:nth-of-type(2) {
+        padding-left: 2rem;
+        font-size: 3vh; }
   .screen1 .screen-down {
     display: flex;
     justify-content: center;
@@ -155,13 +149,13 @@ html {
       bottom: 0;
       background: #353333;
       position: absolute; }
-    .screen1 .screen-down .arrow-down::after {
-      content: "";
-      position: absolute;
-      border: solid 30px #353333;
-      border-color: #353333 transparent transparent transparent;
-      width: 0;
-      transform: translate(-20px, 30px); }
+      .screen1 .screen-down .arrow-down::after {
+        content: "";
+        position: absolute;
+        border: solid 30px #353333;
+        border-color: #353333 transparent transparent transparent;
+        width: 0;
+        transform: translate(-20px, 30px); }
 
 /* screen 2 styles */
 .screen2 {
@@ -172,6 +166,12 @@ html {
   min-height: 100vh;
   background: #e0dede;
   position: relative; }
+  .screen2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-bottom: 100vh solid #353333;
+    border-left: 100vw solid transparent; }
   .screen2 .about-me-title {
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
@@ -190,18 +190,18 @@ html {
       .screen2 .about-me p span {
         display: inline-block;
         transform: translate(-150%); }
-      .screen2 .about-me p span:nth-of-type(1) {
-        animation: show-from-left-animation 15s ease-out infinite; }
-      .screen2 .about-me p span:nth-of-type(2) {
-        animation: show-from-left-animation 15s ease-out infinite 2s; }
-      .screen2 .about-me p span:nth-of-type(3) {
-        animation: show-from-left-animation 15s ease-out infinite 4s; }
-      .screen2 .about-me p span:nth-of-type(4) {
-        animation: show-from-left-animation 15s ease-out infinite 6s; }
-      .screen2 .about-me p span:nth-of-type(5) {
-        animation: show-from-left-animation 15s ease-out infinite 8s; }
-      .screen2 .about-me p span:nth-of-type(6) {
-        animation: show-from-left-animation 15s ease-out infinite 10s; }
+        .screen2 .about-me p span:nth-of-type(1) {
+          animation: show-from-left-animation 15s ease-out infinite; }
+        .screen2 .about-me p span:nth-of-type(2) {
+          animation: show-from-left-animation 15s ease-out infinite 2s; }
+        .screen2 .about-me p span:nth-of-type(3) {
+          animation: show-from-left-animation 15s ease-out infinite 4s; }
+        .screen2 .about-me p span:nth-of-type(4) {
+          animation: show-from-left-animation 15s ease-out infinite 6s; }
+        .screen2 .about-me p span:nth-of-type(5) {
+          animation: show-from-left-animation 15s ease-out infinite 8s; }
+        .screen2 .about-me p span:nth-of-type(6) {
+          animation: show-from-left-animation 15s ease-out infinite 10s; }
   .screen2 .follow-me-title {
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
@@ -237,13 +237,6 @@ html {
     .screen2 .my-knowledge-icons img {
       width: 8vh;
       height: 8vh; }
-
-.screen2::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-bottom: 100vh solid #353333;
-  border-left: 100vw solid transparent; }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .screen1 .profile-cont .profile {
