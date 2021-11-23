@@ -49,9 +49,7 @@ html {
     transform: translateY(20px); } }
 
 @keyframes show-from-left-animation {
-  10% {
-    transform: translate(0); }
-  100% {
+  to {
     transform: translate(0); } }
 
 @keyframes logos-jump {
@@ -188,24 +186,18 @@ html {
     grid-column: 1 / span 3;
     grid-row: 2 / span 3;
     max-height: 50vh; }
-    .screen2 .about-me p {
+    .screen2 .about-me .about-me-content {
       font-size: 3vh;
       color: #353333; }
-      .screen2 .about-me p span {
+      .screen2 .about-me .about-me-content p {
         display: inline-block;
         transform: translate(-150%); }
-        .screen2 .about-me p span:nth-of-type(1) {
-          animation: show-from-left-animation 15s ease-out infinite; }
-        .screen2 .about-me p span:nth-of-type(2) {
-          animation: show-from-left-animation 15s ease-out infinite 2s; }
-        .screen2 .about-me p span:nth-of-type(3) {
-          animation: show-from-left-animation 15s ease-out infinite 4s; }
-        .screen2 .about-me p span:nth-of-type(4) {
-          animation: show-from-left-animation 15s ease-out infinite 6s; }
-        .screen2 .about-me p span:nth-of-type(5) {
-          animation: show-from-left-animation 15s ease-out infinite 8s; }
-        .screen2 .about-me p span:nth-of-type(6) {
-          animation: show-from-left-animation 15s ease-out infinite 10s; }
+        .screen2 .about-me .about-me-content p:nth-of-type(1) {
+          animation: show-from-left-animation 3s ease-out forwards; }
+        .screen2 .about-me .about-me-content p:nth-of-type(2) {
+          animation: show-from-left-animation 3s ease-out forwards 4s; }
+        .screen2 .about-me .about-me-content p:nth-of-type(3) {
+          animation: show-from-left-animation 3s ease-out forwards 8s; }
   .screen2 .follow-me-title {
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
@@ -219,10 +211,14 @@ html {
     grid-row: 4 / span 1;
     z-index: 100;
     animation: logos-jump 1s ease infinite; }
-    .screen2 .follow-me-icons img {
+    .screen2 .follow-me-icons a {
+      margin: 0 20px;
       width: 10vh;
-      height: 10vh;
-      margin: 0 20px; }
+      height: 10vh; }
+      .screen2 .follow-me-icons a img {
+        width: 100%; }
+      .screen2 .follow-me-icons a img:hover {
+        filter: brightness(1.2); }
   .screen2 .my-knowledge-title {
     grid-column: 3 / span 2;
     grid-row: 5 / span 2;
