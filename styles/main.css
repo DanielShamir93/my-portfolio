@@ -6,7 +6,9 @@
   user-select: none; }
 
 html {
-  scrollbar-width: none; }
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; }
 
 @keyframes shake-animation {
   0% {
@@ -74,7 +76,8 @@ html {
   width: 100vw;
   min-height: 100vh;
   background: #e0dede;
-  overflow: hidden; }
+  overflow: hidden;
+  scroll-snap-align: start; }
   .screen1 .top-background {
     width: 150vw;
     height: 70vh;
@@ -165,7 +168,8 @@ html {
   width: 100vw;
   min-height: 100vh;
   background: #e0dede;
-  position: relative; }
+  position: relative;
+  scroll-snap-align: start; }
   .screen2::after {
     content: "";
     position: absolute;
