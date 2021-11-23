@@ -190,14 +190,7 @@ html {
       font-size: 3vh;
       color: #353333; }
       .screen2 .about-me .about-me-content p {
-        display: inline-block;
         transform: translate(-150%); }
-        .screen2 .about-me .about-me-content p:nth-of-type(1) {
-          animation: show-from-left-animation 3s ease-out forwards; }
-        .screen2 .about-me .about-me-content p:nth-of-type(2) {
-          animation: show-from-left-animation 3s ease-out forwards 4s; }
-        .screen2 .about-me .about-me-content p:nth-of-type(3) {
-          animation: show-from-left-animation 3s ease-out forwards 8s; }
   .screen2 .follow-me-title {
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
