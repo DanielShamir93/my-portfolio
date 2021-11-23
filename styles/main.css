@@ -71,7 +71,7 @@ html {
 
 /* screen 1 styles */
 .screen1 {
-  width: 120vw;
+  width: 100vw;
   min-height: 100vh;
   background: #e0dede;
   overflow: hidden; }
