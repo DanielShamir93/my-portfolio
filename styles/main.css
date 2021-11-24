@@ -189,8 +189,11 @@ html {
     .screen2 .about-me .about-me-content {
       font-size: 3vh;
       color: #353333; }
-      .screen2 .about-me .about-me-content p {
-        transform: translate(-150%); }
+      .screen2 .about-me .about-me-content .line {
+        transform: translate(-150%);
+        display: flex; }
+        .screen2 .about-me .about-me-content .line p {
+          margin-left: 10px; }
   .screen2 .follow-me-title {
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
