@@ -195,7 +195,7 @@ html {
         .screen2 .about-me .about-me-content .line p {
           margin-left: 10px; }
   .screen2 .follow-me-title {
-    grid-column: 4 / span 1;
+    grid-column: 4 / span 2;
     grid-row: 3 / span 1;
     z-index: 100;
     color: #e0dede;
@@ -212,7 +212,8 @@ html {
       width: 10vh;
       height: 10vh; }
       .screen2 .follow-me-icons a img {
-        width: 100%; }
+        width: 120px;
+        height: 120px; }
       .screen2 .follow-me-icons a img:hover {
         filter: brightness(1.2); }
   .screen2 .my-knowledge-title {
@@ -226,13 +227,13 @@ html {
     justify-content: space-between;
     position: relative;
     right: 5vw;
-    grid-column: 2 / span 4;
+    grid-column: 3 / span 3;
     grid-row: 6 / span 1;
     z-index: 100;
     flex-wrap: wrap; }
     .screen2 .my-knowledge-icons img {
-      width: 8vh;
-      height: 8vh; }
+      width: 100px;
+      height: 100px; }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .screen1 .profile-cont .profile {
