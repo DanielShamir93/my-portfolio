@@ -385,7 +385,7 @@ template {
     width: 150vw;
     height: 70vh;
     background: #353333;
-    border-right: 50px solid #353333;
+    border-right: 5vh solid #353333;
     transform: rotate(8deg) translate(-20%, -30%); }
     .screen1 .top-background .profile-cont {
       animation: shake-animation 1s forwards linear 4s; }
@@ -402,61 +402,66 @@ template {
         background-position: 53% 80%;
         filter: brightness(1.5);
         transform: translate(-100vw, 45vh) rotate(-360deg);
-        animation: spin-animation 3s forwards ease-in-out; }
+        animation: spin-animation 0s forwards ease-in-out; }
     .screen1 .top-background .profession {
       position: absolute;
       left: 20vw;
       bottom: 0;
-      width: 50vw;
+      width: 53vw;
       max-height: 10vh;
       z-index: -100;
       border-bottom: 4vh solid #353333;
-      transform: translateY(15vh); }
+      transform: translateY(15vh);
+      animation: profession-animation 2s ease-out forwards 6s; }
       .screen1 .top-background .profession p {
         transform: translateY(-4vh);
-        font-size: 2vw;
+        font-size: 4vh;
         color: #353333;
-        letter-spacing: 1px;
-        text-indent: 18vw; }
+        letter-spacing: 0.5vh;
+        text-indent: 15vw; }
     .screen1 .top-background .hello-msg p {
-      font-size: calc(min(2vw, 3vh));
+      font-size: 3vh;
       color: #e0dede;
-      letter-spacing: 2px;
+      letter-spacing: 0.5vh;
       left: 92vw;
-      bottom: 10px;
+      bottom: 5vh;
       position: absolute;
       transform: scale(0);
-      animation: hello-animation 1s forwards ease 5.5s; }
+      animation: hello-animation 1s forwards ease 0s; }
       .screen1 .top-background .hello-msg p span:nth-of-type(1) {
         font-size: 5vh; }
       .screen1 .top-background .hello-msg p span:nth-of-type(2) {
-        padding-left: 2rem;
+        padding-left: 3vh;
         font-size: 3vh; }
   .screen1 .screen-down {
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
+    width: 100vw;
+    height: 12vh;
     position: relative;
+    top: 10vh;
     opacity: 0;
     animation: arrow-animation 1s infinite linear 9s; }
     .screen1 .screen-down .catchphrase {
-      font-size: calc(min(4vh, 2vw));
+      font-size: 4vh;
       color: #353333;
       position: absolute;
-      bottom: 50px; }
+      top: 0; }
     .screen1 .screen-down .arrow-down {
-      width: 20px;
-      height: 40px;
+      width: 2vh;
+      height: 4vh;
+      border-radius: 1px;
       bottom: 0;
       background: #353333;
       position: absolute; }
       .screen1 .screen-down .arrow-down::after {
         content: "";
         position: absolute;
-        border: solid 30px #353333;
+        border: solid 3vh #353333;
+        border-radius: 2px;
         border-color: #353333 transparent transparent transparent;
         width: 0;
-        transform: translate(-20px, 30px); }
+        transform: translate(-2vh, 3vh); }
 
 /* screen 2 styles */
 .screen2 {
