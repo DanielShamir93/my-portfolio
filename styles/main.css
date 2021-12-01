@@ -315,6 +315,10 @@ template {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory; }
 
+@font-face {
+  src: url(../assets/fonts/Pacifico-Regular.ttf);
+  font-family: Pacifico; }
+
 @keyframes shake-animation {
   0% {
     transform: rotateY(30deg); }
@@ -329,6 +333,7 @@ template {
 
 @keyframes spin-animation {
   to {
+    filter: brightness(1.5);
     transform: translateY(45vh) rotate(-7deg); } }
 
 @keyframes show-animation {
@@ -341,7 +346,7 @@ template {
 
 @keyframes profession-animation {
   to {
-    transform: translateY(calc(max(15vh, 8vw))); } }
+    transform: translateY(15vh); } }
 
 @keyframes arrow-animation {
   0% {
@@ -365,20 +370,11 @@ template {
   100% {
     transform: translateY(0); } }
 
-/* mobile only animations */
-@keyframes mobile-profession-animation {
-  to {
-    transform: translateY(25vh); } }
-
-@font-face {
-  src: url(../assets/fonts/Pacifico-Regular.ttf);
-  font-family: Pacifico; }
-
 /* screen 1 styles */
 .screen1 {
   width: 100vw;
   min-height: 100vh;
-  background: #e0dede;
+  background: #E0DEDE;
   overflow: hidden;
   scroll-snap-align: start; }
   .screen1 .top-background {
@@ -395,39 +391,39 @@ template {
         margin: 0 auto;
         border-radius: 50%;
         border: 1vh outset gray;
-        background: #e0dede;
         background-image: url(../assets/images/IMG_20191016_175657_0132.JPG);
         background-repeat: no-repeat;
         background-size: 220%;
         background-position: 53% 80%;
-        filter: brightness(1.5);
         transform: translate(-100vw, 45vh) rotate(-360deg);
-        animation: spin-animation 0s forwards ease-in-out; }
+        animation: spin-animation 3s forwards ease-in-out; }
     .screen1 .top-background .profession {
       position: absolute;
       left: 20vw;
-      bottom: 0;
+      bottom: 2vh;
       width: 53vw;
       max-height: 10vh;
       z-index: -100;
-      border-bottom: 4vh solid #353333;
-      transform: translateY(15vh);
+      white-space: nowrap;
       animation: profession-animation 2s ease-out forwards 6s; }
       .screen1 .top-background .profession p {
-        transform: translateY(-4vh);
+        padding-bottom: 3vh;
+        border-bottom: 3vh solid #353333;
+        font-weight: bold;
         font-size: 4vh;
         color: #353333;
-        letter-spacing: 0.5vh;
+        letter-spacing: 0.2vh;
         text-indent: 15vw; }
     .screen1 .top-background .hello-msg p {
       font-size: 3vh;
-      color: #e0dede;
+      color: #E0DEDE;
       letter-spacing: 0.5vh;
-      left: 92vw;
-      bottom: 5vh;
+      right: 25vw;
+      bottom: 15vh;
       position: absolute;
       transform: scale(0);
-      animation: hello-animation 1s forwards ease 0s; }
+      animation: hello-animation 1s forwards ease 5.5s;
+      white-space: nowrap; }
       .screen1 .top-background .hello-msg p span:nth-of-type(1) {
         font-size: 5vh; }
       .screen1 .top-background .hello-msg p span:nth-of-type(2) {
@@ -437,31 +433,23 @@ template {
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 12vh;
+    height: 17vh;
     position: relative;
-    top: 10vh;
+    top: 7vh;
     opacity: 0;
+    text-decoration: none;
     animation: arrow-animation 1s infinite linear 9s; }
+    .screen1 .screen-down-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
     .screen1 .screen-down .catchphrase {
       font-size: 4vh;
-      color: #353333;
-      position: absolute;
-      top: 0; }
-    .screen1 .screen-down .arrow-down {
-      width: 2vh;
-      height: 4vh;
-      border-radius: 1px;
-      bottom: 0;
-      background: #353333;
-      position: absolute; }
-      .screen1 .screen-down .arrow-down::after {
-        content: "";
-        position: absolute;
-        border: solid 3vh #353333;
-        border-radius: 2px;
-        border-color: #353333 transparent transparent transparent;
-        width: 0;
-        transform: translate(-2vh, 3vh); }
+      color: #353333; }
+    .screen1 .screen-down #arrow-down {
+      font-size: 10vh;
+      color: #353333; }
 
 /* screen 2 styles */
 .screen2 {
@@ -470,7 +458,7 @@ template {
   grid-template-rows: repeat(6, 1fr);
   width: 100vw;
   min-height: 100vh;
-  background: #e0dede;
+  background: #E0DEDE;
   position: relative;
   scroll-snap-align: start; }
   .screen2::after {
@@ -503,7 +491,7 @@ template {
     grid-column: 4 / span 2;
     grid-row: 3 / span 1;
     z-index: 100;
-    color: #e0dede;
+    color: #E0DEDE;
     font-size: 50px; }
   .screen2 .follow-me-icons {
     display: flex;
@@ -523,7 +511,7 @@ template {
     grid-column: 3 / span 2;
     grid-row: 5 / span 2;
     z-index: 100;
-    color: #e0dede;
+    color: #E0DEDE;
     font-size: 50px; }
   .screen2 .my-knowledge-icons {
     display: flex;
@@ -538,25 +526,29 @@ template {
       width: 80px;
       height: 80px; }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .screen1 .profile-cont .profile {
-    width: 300px;
-    height: 300px;
-    max-width: calc(max(20vw, 35vh));
-    max-height: calc(max(20vw, 35vh));
-    min-width: calc(max(20vw, 45vh));
-    min-height: calc(max(20vw, 45vh)); }
-  .screen1 .profession {
-    bottom: 20px; }
-    .screen1 .profession p {
-      font-size: 2vw;
-      letter-spacing: 0; }
-  .screen1 .hello-msg p {
-    font-size: 2vw;
-    letter-spacing: 0;
-    left: 98vw; }
-    .screen1 .hello-msg p span {
-      font-size: 4vh; }
+@media (min-width: 768px) and (max-width: 1024px) {
+  @keyframes profession-animation {
+    to {
+      transform: translateY(17vh); } }
+  .screen1 .top-background {
+    height: 65vh;
+    transform: rotate(8deg) translate(-25%, -30%); }
+    .screen1 .top-background .profile-cont .profile {
+      height: 40vh;
+      width: 40vh;
+      transform: translate(-100vw, 50vh) rotate(-360deg); }
+    .screen1 .top-background .profession {
+      left: 85vw;
+      width: 60vw; }
+      .screen1 .top-background .profession p {
+        font-size: 3vh;
+        letter-spacing: unset;
+        text-indent: 15vw;
+        transform: translateY(-2vh); }
+    .screen1 .top-background .hello-msg p {
+      bottom: 27vh; }
+  .screen1 .screen-down {
+    top: 13vh; }
   .screen2 .about-me-title {
     font-size: 4vh; }
   .screen2 .about-me .about-me-content {
@@ -579,35 +571,44 @@ template {
     height: 7vh; } }
 
 @media (max-width: 767px) {
+  @keyframes spin-animation {
+    to {
+      filter: brightness(1.5);
+      transform: translateY(45vh) rotate(-7deg); } }
+  @keyframes profession-animation {
+    to {
+      transform: translateY(37vh); } }
+  @keyframes background-stretch-animation {
+    to {
+      border-bottom: 45vh solid #353333; } }
   .screen1 .top-background {
-    height: 60vh; }
+    height: 63.5vh;
+    transform: rotate(8deg) translate(-12%, -30%); }
     .screen1 .top-background .profile-cont .profile {
-      width: 100px;
-      height: 100px;
-      max-width: calc(max(15vw, 20vh));
-      max-height: calc(max(15vw, 20vh));
-      min-width: calc(max(15vw, 30vh));
-      min-height: calc(max(15vw, 30vh)); }
+      width: 37vh;
+      height: 37vh; }
     .screen1 .top-background .profession {
       border-bottom: unset;
-      left: 30vw;
-      animation: mobile-profession-animation 2s ease-out forwards 6s; }
+      animation: profession-animation 2s ease-out forwards 6s; }
       .screen1 .top-background .profession p {
-        font-size: 3vh;
-        width: 100vw; }
+        font-size: 4vh;
+        width: 200vw;
+        text-indent: 17vw;
+        animation: background-stretch-animation 2s ease-out forwards 7.8s; }
     .screen1 .top-background .hello-msg p {
       font-size: 2vh;
       letter-spacing: unset;
-      bottom: 20vh;
-      left: 70vw; }
-      .screen1 .top-background .hello-msg p span {
-        font-size: 5vh; }
-  .screen1 .catchphrase {
-    font-size: 2vh; }
+      bottom: 25vh;
+      left: 28vw; }
   .screen1 .screen-down {
-    display: flex;
-    justify-content: center;
-    margin-top: 25vh; }
+    top: 22vh;
+    height: 10vh; }
+    .screen1 .screen-down .catchphrase {
+      font-size: 3vh;
+      color: #E0DEDE; }
+    .screen1 .screen-down #arrow-down {
+      font-size: 5vh;
+      color: #E0DEDE; }
   .screen2 .about-me-title {
     font-size: 3vh; }
   .screen2 .about-me .about-me-content {
