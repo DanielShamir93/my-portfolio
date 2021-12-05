@@ -372,7 +372,7 @@ template {
 
 /* screen 1 styles */
 .screen1 {
-  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   background: #E0DEDE;
   overflow: hidden;
@@ -450,6 +450,71 @@ template {
     .screen1 .screen-down #arrow-down {
       font-size: 10vh;
       color: #353333; }
+
+.spaceship-container {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  transform: rotate(180deg); }
+  .spaceship-container .spaceship {
+    position: relative;
+    width: 12vh;
+    height: 35vh;
+    background: #B5B5B5;
+    border-radius: 50% 50% 40% 40%; }
+    .spaceship-container .spaceship-head {
+      position: absolute;
+      border-left: 4vh solid transparent;
+      border-right: 4vh solid transparent;
+      border-bottom: 8vh solid black;
+      bottom: 32vh;
+      left: 17%; }
+    .spaceship-container .spaceship-head-ring {
+      position: absolute;
+      width: 7.5vh;
+      height: 2vh;
+      bottom: 31vh;
+      left: 17%;
+      border-radius: 50%;
+      background: black; }
+    .spaceship-container .spaceship-window {
+      width: 8vh;
+      height: 8vh;
+      background: #EAEFF5;
+      position: absolute;
+      border-radius: 50% 50%;
+      border: 1.2vh solid black;
+      top: 8vh;
+      left: 16%; }
+    .spaceship-container .spaceship-left-wing {
+      width: 7vh;
+      height: 15vh;
+      background: black;
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 50%;
+      right: 8vh;
+      bottom: 2vh;
+      z-index: -100; }
+    .spaceship-container .spaceship-left-wing-extension {
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 2vh solid transparent;
+      border-right: 3vh solid transparent;
+      border-top: 10vh solid black;
+      transform: rotate(-5deg);
+      top: 30vh;
+      right: 12vh; }
+    .spaceship-container .spaceship-middle-wing {
+      width: 2vh;
+      height: 22vh;
+      background: black;
+      position: absolute;
+      top: 20vh;
+      left: 5vh;
+      border-radius: 40% 40% 45% 45%; }
 
 /* screen 2 styles */
 .screen2 {
