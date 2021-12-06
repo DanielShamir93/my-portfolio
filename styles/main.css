@@ -412,6 +412,11 @@ template {
       bottom: 5vh;
       right: 9.8vh; }
 
+.space {
+  height: 200vh;
+  background-image: url(../assets/images/QUojE4LDBrcRnS7wn7DA9B.jpg);
+  background-size: cover; }
+
 @keyframes shake-animation {
   0% {
     transform: rotateY(30deg); }
@@ -530,7 +535,8 @@ template {
     bottom: 0;
     opacity: 0;
     text-decoration: none;
-    animation: arrow-animation 1s infinite linear 0s; }
+    animation: arrow-animation 1s infinite linear 9s;
+    cursor: default; }
     .screen1 .screen-down .catchphrase {
       position: relative;
       font-size: 4vh;
@@ -539,20 +545,10 @@ template {
     .screen1 .screen-down-content {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      cursor: pointer; }
     .screen1 .screen-down .spaceship-container {
-      transform: scale(0.3) translateY(8vh); }
-    .screen1 .screen-down-content:hover .spaceship-container {
-      transform: rotate(180deg) scale(0.3) translateY(-20vh);
-      transition: 0.5s all; }
-    .screen1 .screen-down #arrow-down {
-      font-size: 10vh;
-      color: #353333; }
-
-.space {
-  height: 100vh;
-  background-image: url(../assets/images/QUojE4LDBrcRnS7wn7DA9B.jpg);
-  background-size: cover; }
+      transform: scale(0.3) translateY(15vh) rotate(180deg); }
 
 /* screen 2 styles */
 .screen2 {

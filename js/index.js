@@ -1,4 +1,4 @@
-const startSecondScreenAnimations = (e) => {
+document.addEventListener('scroll', (e) => {
     let currentScrollTop = document.documentElement.scrollTop;
     if (currentScrollTop > document.documentElement.clientHeight - 100) {
         const list = document.querySelectorAll('.about-me.line');
@@ -6,4 +6,4 @@ const startSecondScreenAnimations = (e) => {
             list[i].style.animation = `show-from-left-animation 3s ease-out forwards ${i * 3}s`;
         }
     }
-}
+});
