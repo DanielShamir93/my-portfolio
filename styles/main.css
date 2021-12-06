@@ -319,6 +319,102 @@ template {
   src: url(../assets/fonts/Pacifico-Regular.ttf);
   font-family: Pacifico; }
 
+.spaceship-container {
+  transform: rotate(180deg) scale(0.3);
+  position: relative; }
+  .spaceship-container .spaceship {
+    position: relative;
+    width: 12vh;
+    height: 35vh;
+    background: #B5B5B5;
+    border-radius: 50% 50% 40% 40%; }
+    .spaceship-container .spaceship-head {
+      position: absolute;
+      border-left: 4vh solid transparent;
+      border-right: 4vh solid transparent;
+      border-bottom: 8vh solid #353333;
+      bottom: 31vh;
+      left: 17%; }
+    .spaceship-container .spaceship-head-ring {
+      position: absolute;
+      width: 7.9vh;
+      height: 2vh;
+      bottom: 30vh;
+      left: 17%;
+      border-radius: 50%;
+      background: #353333; }
+    .spaceship-container .spaceship-window {
+      width: 8vh;
+      height: 8vh;
+      background: #EAEFF5;
+      position: absolute;
+      border-radius: 50% 50%;
+      border: 1.2vh solid #353333;
+      top: 8vh;
+      left: 16%; }
+    .spaceship-container .spaceship-left {
+      position: absolute;
+      height: 10vh;
+      width: 10vh;
+      top: 20vh;
+      left: 5vh;
+      z-index: -100; }
+      .spaceship-container .spaceship-left-wing {
+        position: relative;
+        width: 7vh;
+        height: 15vh;
+        background: #353333;
+        transform: rotate(45deg);
+        border-radius: 50%;
+        right: 8vh;
+        bottom: 2vh; }
+      .spaceship-container .spaceship-left-wing-extension {
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: 2vh solid transparent;
+        border-right: 3vh solid transparent;
+        border-top: 10vh solid #353333;
+        transform: rotate(-5deg);
+        bottom: 5vh;
+        right: 9.8vh; }
+    .spaceship-container .spaceship-middle-wing {
+      width: 2vh;
+      height: 22vh;
+      background: #353333;
+      position: absolute;
+      top: 20vh;
+      left: 5vh;
+      border-radius: 40% 40% 45% 45%; }
+    .spaceship-container .spaceship-right {
+      transform: rotateY(180deg);
+      position: absolute;
+      height: 10vh;
+      width: 10vh;
+      top: 20vh;
+      right: 5vh;
+      z-index: -100; }
+      .spaceship-container .spaceship-right-wing {
+        position: relative;
+        width: 7vh;
+        height: 15vh;
+        background: #353333;
+        transform: rotate(45deg);
+        border-radius: 50%;
+        right: 8vh;
+        bottom: 2vh;
+        z-index: -100; }
+      .spaceship-container .spaceship-right-wing-extension {
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: 2vh solid transparent;
+        border-right: 3vh solid transparent;
+        border-top: 10vh solid #353333;
+        transform: rotate(-5deg);
+        bottom: 5vh;
+        right: 9.8vh; }
+
 @keyframes shake-animation {
   0% {
     transform: rotateY(30deg); }
@@ -433,88 +529,24 @@ template {
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 17vh;
     position: relative;
-    top: 7vh;
+    bottom: 6vh;
     opacity: 0;
     text-decoration: none;
-    animation: arrow-animation 1s infinite linear 9s; }
+    animation: arrow-animation 1s infinite linear 0s; }
+    .screen1 .screen-down .catchphrase {
+      position: relative;
+      font-size: 4vh;
+      color: #353333;
+      top: 10vh;
+      padding-bottom: 2vh; }
     .screen1 .screen-down-content {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-between; }
-    .screen1 .screen-down .catchphrase {
-      font-size: 4vh;
-      color: #353333; }
+      align-items: center; }
     .screen1 .screen-down #arrow-down {
       font-size: 10vh;
       color: #353333; }
-
-.spaceship-container {
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-  transform: rotate(180deg); }
-  .spaceship-container .spaceship {
-    position: relative;
-    width: 12vh;
-    height: 35vh;
-    background: #B5B5B5;
-    border-radius: 50% 50% 40% 40%; }
-    .spaceship-container .spaceship-head {
-      position: absolute;
-      border-left: 4vh solid transparent;
-      border-right: 4vh solid transparent;
-      border-bottom: 8vh solid black;
-      bottom: 32vh;
-      left: 17%; }
-    .spaceship-container .spaceship-head-ring {
-      position: absolute;
-      width: 7.5vh;
-      height: 2vh;
-      bottom: 31vh;
-      left: 17%;
-      border-radius: 50%;
-      background: black; }
-    .spaceship-container .spaceship-window {
-      width: 8vh;
-      height: 8vh;
-      background: #EAEFF5;
-      position: absolute;
-      border-radius: 50% 50%;
-      border: 1.2vh solid black;
-      top: 8vh;
-      left: 16%; }
-    .spaceship-container .spaceship-left-wing {
-      width: 7vh;
-      height: 15vh;
-      background: black;
-      position: absolute;
-      transform: rotate(45deg);
-      border-radius: 50%;
-      right: 8vh;
-      bottom: 2vh;
-      z-index: -100; }
-    .spaceship-container .spaceship-left-wing-extension {
-      width: 0;
-      height: 0;
-      position: absolute;
-      border-left: 2vh solid transparent;
-      border-right: 3vh solid transparent;
-      border-top: 10vh solid black;
-      transform: rotate(-5deg);
-      top: 30vh;
-      right: 12vh; }
-    .spaceship-container .spaceship-middle-wing {
-      width: 2vh;
-      height: 22vh;
-      background: black;
-      position: absolute;
-      top: 20vh;
-      left: 5vh;
-      border-radius: 40% 40% 45% 45%; }
 
 /* screen 2 styles */
 .screen2 {
