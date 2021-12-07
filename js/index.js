@@ -14,13 +14,15 @@ lastScrollPosition = 0;
 document.addEventListener('scroll', (e) => {
     let currentScrollPosition = window.scrollY;
 
+    document.querySelector('.screen-down').style.opacity = '1';
     if (window.scrollY > lastScrollPosition) {
         // Scroll down
         spaceshipContainer.style.setProperty('--spaceship-scale', '1');
-        spaceshipContainer.style.top = '40vh';
+        spaceshipContainer.style.setProperty('--spaceship-rotate', '180deg');
+        spaceshipContainer.style.top = '30vh';
 
         if (window.scrollY < document.documentElement.clientHeight * SCREEN_NUMBER) {
-            // Scroll down until get to the asked screen
+            // Scroll down until get to second screen
             window.scrollBy(0, 20)
         }
     }else {
@@ -28,10 +30,12 @@ document.addEventListener('scroll', (e) => {
         spaceshipContainer.style.setProperty('--spaceship-rotate', '0deg');
 
         if (window.scrollY > 0) {
+            // Scroll up until get to first screen
             window.scrollBy(0, -20)
         }
 
         if (window.scrollY === 0) {
+            // On top of the site
             spaceshipContainer.style.setProperty('--spaceship-scale', '0.3');
             spaceshipContainer.style.setProperty('--spaceship-rotate', '180deg');
             spaceshipContainer.style.top = '72vh';
@@ -39,4 +43,11 @@ document.addEventListener('scroll', (e) => {
     }
 
     lastScrollPosition = currentScrollPosition;
+});
+
+document.querySelector('.screen-down-content').addEventListener('click', (e) => {
+    if (window.scrollY === 0) {
+        // On top of the site
+        window.scrollBy(0, 20);
+    }
 });
