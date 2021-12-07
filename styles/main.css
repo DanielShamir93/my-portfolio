@@ -312,8 +312,8 @@ template {
 
 :root {
   scrollbar-width: none;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory; }
+  --spaceship-scale: 0.3;
+  --spaceship-rotate: 180deg; }
 
 @font-face {
   src: url(../assets/fonts/Pacifico-Regular.ttf);
@@ -446,20 +446,16 @@ template {
   to {
     transform: translateY(15vh); } }
 
-@keyframes appear-animation {
-  to {
-    opacity: 1; } }
-
 @keyframes arrow-animation {
   0% {
     opacity: 1;
-    transform: translateY(20px) scale(0.3) rotate(180deg); }
+    transform: translateY(2vh) scale(var(--spaceship-scale)) rotate(var(--spaceship-rotate)); }
   50% {
     opacity: 1;
-    transform: scale(0.3) rotate(180deg); }
+    transform: scale(var(--spaceship-scale)) rotate(var(--spaceship-rotate)); }
   100% {
     opacity: 1;
-    transform: translateY(20px) scale(0.3) rotate(180deg); } }
+    transform: translateY(2vh) scale(var(--spaceship-scale)) rotate(var(--spaceship-rotate)); } }
 
 @keyframes show-from-left-animation {
   to {
@@ -478,8 +474,7 @@ template {
   min-width: 100vw;
   min-height: 100vh;
   background: #E0DEDE;
-  overflow: hidden;
-  scroll-snap-align: start; }
+  overflow: hidden; }
   .screen1 .top-background {
     width: 150vw;
     height: 70vh;
@@ -539,7 +534,7 @@ template {
     text-decoration: none;
     cursor: default;
     opacity: 0;
-    animation: arrow-animation 1s forwards linear 9s; }
+    animation: show-animation 1s forwards linear 0s; }
     .screen1 .screen-down .catchphrase {
       position: relative;
       font-size: 4vh;
@@ -553,10 +548,11 @@ template {
       position: relative;
       bottom: 3vh; }
       .screen1 .screen-down-content .spaceship-container {
-        transform: scale(0.3) rotate(180deg);
+        transform: scale(var(--spaceship-scale)) rotate(var(--spaceship-rotate));
         position: fixed;
         top: 72vh;
-        animation: arrow-animation 1s infinite linear; }
+        animation: arrow-animation 1s infinite linear;
+        transition: all 1s ease; }
 
 /* screen 2 styles */
 .screen2 {
@@ -566,8 +562,7 @@ template {
   width: 100vw;
   min-height: 100vh;
   background: #E0DEDE;
-  position: relative;
-  scroll-snap-align: start; }
+  position: relative; }
   .screen2::after {
     content: "";
     position: absolute;
