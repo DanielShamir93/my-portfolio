@@ -446,15 +446,20 @@ template {
   to {
     transform: translateY(15vh); } }
 
+@keyframes appear-animation {
+  to {
+    opacity: 1; } }
+
 @keyframes arrow-animation {
   0% {
     opacity: 1;
-    transform: translateY(20px); }
+    transform: translateY(20px) scale(0.3) rotate(180deg); }
   50% {
-    transform: unset; }
+    opacity: 1;
+    transform: scale(0.3) rotate(180deg); }
   100% {
     opacity: 1;
-    transform: translateY(20px); } }
+    transform: translateY(20px) scale(0.3) rotate(180deg); } }
 
 @keyframes show-from-left-animation {
   to {
@@ -528,27 +533,30 @@ template {
         padding-left: 3vh;
         font-size: 3vh; }
   .screen1 .screen-down {
-    display: flex;
     justify-content: center;
     width: 100vw;
-    position: fixed;
     bottom: 0;
-    opacity: 0;
     text-decoration: none;
-    animation: arrow-animation 1s infinite linear 9s;
-    cursor: default; }
+    cursor: default;
+    opacity: 0;
+    animation: arrow-animation 1s forwards linear 9s; }
     .screen1 .screen-down .catchphrase {
       position: relative;
       font-size: 4vh;
       color: #353333;
-      top: 13vh; }
+      top: 8vh; }
     .screen1 .screen-down-content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      cursor: pointer; }
-    .screen1 .screen-down .spaceship-container {
-      transform: scale(0.3) translateY(15vh) rotate(180deg); }
+      cursor: pointer;
+      position: relative;
+      bottom: 3vh; }
+      .screen1 .screen-down-content .spaceship-container {
+        transform: scale(0.3) rotate(180deg);
+        position: fixed;
+        top: 72vh;
+        animation: arrow-animation 1s infinite linear; }
 
 /* screen 2 styles */
 .screen2 {
