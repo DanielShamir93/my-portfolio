@@ -315,6 +315,9 @@ template {
   --spaceship-scale: 0.3;
   --spaceship-rotate: 180deg; }
 
+:root::-webkit-scrollbar {
+  display: none; }
+
 @font-face {
   src: url(../assets/fonts/Pacifico-Regular.ttf);
   font-family: Pacifico; }
@@ -439,16 +442,16 @@ template {
     width: 100vw;
     bottom: 0;
     text-decoration: none;
-    cursor: default;
-    opacity: 0;
-    animation: show-animation 1s forwards linear 9s; }
+    cursor: default; }
     .screen1 .screen-down-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       cursor: pointer;
       position: relative;
-      bottom: 3vh; }
+      opacity: 0;
+      bottom: 3vh;
+      animation: show-animation 1s forwards linear 9s; }
       .screen1 .screen-down-content .catchphrase {
         position: relative;
         font-size: 4vh;
