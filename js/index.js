@@ -1,3 +1,7 @@
+const spaceshipContainer = document.querySelector('.spaceship-container');
+const SCREEN_NUMBER = 3;
+let lastScrollPosition = 0;
+
 document.addEventListener('scroll', (e) => {
     let currentScrollTop = document.documentElement.scrollTop;
     if (currentScrollTop > document.documentElement.clientHeight - 100) {
@@ -8,9 +12,7 @@ document.addEventListener('scroll', (e) => {
     }
 });
 
-const spaceshipContainer = document.querySelector('.spaceship-container');
-const SCREEN_NUMBER = 3;
-lastScrollPosition = 0;
+
 document.addEventListener('scroll', (e) => {
     let currentScrollPosition = window.scrollY;
 
@@ -23,7 +25,7 @@ document.addEventListener('scroll', (e) => {
 
         if (window.scrollY < document.documentElement.clientHeight * SCREEN_NUMBER) {
             // Scroll down until get to second screen
-            window.scrollBy(0, 20)
+            window.scrollBy(0, 40)
         }
     }else {
         // Scroll up
@@ -31,7 +33,7 @@ document.addEventListener('scroll', (e) => {
 
         if (window.scrollY > 0) {
             // Scroll up until get to first screen
-            window.scrollBy(0, -20)
+            window.scrollBy(0, -40)
         }
 
         if (window.scrollY === 0) {

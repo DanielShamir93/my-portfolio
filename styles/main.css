@@ -594,8 +594,8 @@ template {
 /* screen 2 styles */
 .screen2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(6, auto);
   width: 100vw;
   min-height: 100vh;
   background: #E0DEDE;
@@ -607,31 +607,33 @@ template {
     border-bottom: 100vh solid #353333;
     border-left: 100vw solid transparent; }
   .screen2 .about-me-title {
+    padding-top: 1vh;
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
-    padding-left: 10px;
+    padding-left: 2vmin;
     color: #353333;
-    font-size: 5vh;
+    font-size: 5vmin;
     max-height: 50vh; }
   .screen2 .about-me {
-    padding: 0 10px;
+    padding: 0 2vmin;
     grid-column: 1 / span 3;
     grid-row: 2 / span 3;
     max-height: 50vh; }
-    .screen2 .about-me .about-me-content {
+    .screen2 .about-me-content {
       font-size: 3vh;
-      color: #353333; }
-      .screen2 .about-me .about-me-content .line {
-        transform: translate(-150%);
-        display: flex; }
-        .screen2 .about-me .about-me-content .line p {
-          margin-left: 10px; }
+      color: #353333;
+      width: 50vw; }
+      .screen2 .about-me-content-line {
+        display: flex;
+        padding: 2vh 0; }
+        .screen2 .about-me-content-line p {
+          margin-left: 2vmin; }
   .screen2 .follow-me-title {
     grid-column: 4 / span 2;
     grid-row: 3 / span 1;
     z-index: 100;
     color: #E0DEDE;
-    font-size: 50px; }
+    font-size: 5vmin; }
   .screen2 .follow-me-icons {
     display: flex;
     justify-content: center;
@@ -640,10 +642,10 @@ template {
     z-index: 100;
     animation: logos-jump 1s ease infinite; }
     .screen2 .follow-me-icons a {
-      margin: 0 30px; }
+      margin: 0 2vmin; }
       .screen2 .follow-me-icons a img {
-        width: 100px;
-        height: 100px; }
+        width: 10vmin;
+        height: 10vmin; }
       .screen2 .follow-me-icons a img:hover {
         filter: brightness(1.2); }
   .screen2 .my-knowledge-title {
@@ -651,7 +653,7 @@ template {
     grid-row: 5 / span 2;
     z-index: 100;
     color: #E0DEDE;
-    font-size: 50px; }
+    font-size: 5vmin; }
   .screen2 .my-knowledge-icons {
     display: flex;
     justify-content: space-between;
@@ -662,8 +664,8 @@ template {
     z-index: 100;
     flex-wrap: wrap; }
     .screen2 .my-knowledge-icons img {
-      width: 80px;
-      height: 80px; }
+      width: 8vmin;
+      height: 8vmin; }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   @keyframes profession-animation {
