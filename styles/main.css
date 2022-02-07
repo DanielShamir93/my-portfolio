@@ -392,16 +392,18 @@ template {
     border-right: 5vh solid #353333;
     transform: rotate(8deg) translate(-20%, -30%); }
     .screen1 .top-background .profile-cont {
-      animation: shake-animation 1s forwards linear 4s; }
+      animation: shake-animation 1s forwards linear 4s;
+      filter: brightness(80%);
+      filter: grayscale(50%); }
       .screen1 .top-background .profile-cont .profile {
         height: 50vh;
         width: 50vh;
         margin: 0 auto;
         border-radius: 50%;
         border: 1vh outset gray;
-        background-image: url(../assets/images/IMG_20191016_175657_0132.JPG);
+        background-image: url(../assets/images/cartoon-me.jpeg);
         background-repeat: no-repeat;
-        background-size: 220%;
+        background-size: 100%;
         background-position: 53% 80%;
         transform: translate(-100vw, 45vh) rotate(-360deg);
         animation: spin-animation 3s forwards ease-in-out; }
