@@ -713,8 +713,7 @@ template {
 @media (max-width: 767px) {
   @keyframes spin-animation {
     to {
-      filter: brightness(1.5);
-      transform: translateY(45vh) rotate(-7deg); } }
+      transform: translateY(45vh) rotate(-8deg); } }
   @keyframes profession-animation {
     to {
       transform: translateY(37vh); } }
