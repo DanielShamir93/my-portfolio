@@ -12,7 +12,6 @@ document.addEventListener('scroll', (e) => {
     }
 });
 
-
 document.addEventListener('scroll', (e) => {
     let currentScrollPosition = window.scrollY;
 
@@ -22,11 +21,8 @@ document.addEventListener('scroll', (e) => {
         spaceshipContainer.style.setProperty('--spaceship-scale', '1');
         spaceshipContainer.style.setProperty('--spaceship-rotate', '180deg');
         spaceshipContainer.style.top = '30vh';
-
-        if (window.scrollY < document.documentElement.clientHeight * SCREEN_NUMBER) {
-            // Scroll down until get to second screen
-            window.scrollBy(0, 40)
-        }
+        // Scroll down
+        window.scrollBy(0, 40)
     }else {
         // Scroll up
         spaceshipContainer.style.setProperty('--spaceship-rotate', '0deg');
